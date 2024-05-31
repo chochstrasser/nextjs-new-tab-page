@@ -51,15 +51,16 @@ const Home: NextPage = () => {
   };
 
   return (
-    <main className="w-full flex flex-col items-center h-screen">
+    <main className="w-full h-full flex flex-col items-center">
       <div className="h-16"></div>
       <div className="flex flex-col items-center justify-center w-full">
-        <div id="logo" className="pt-24 pb-12 text-6xl md:text-8xl">
+        <div id="logo" className="pt-6 md:pt-24 pb-12 text-6xl md:text-8xl">
           Google
         </div>
         <SearchBar onSearch={handleSearch} />
         <QuickLinks links={links} onLinkClick={handleLinkClick} />
       </div>
+      <div className="h-16"></div>
     </main>
   );
 };
