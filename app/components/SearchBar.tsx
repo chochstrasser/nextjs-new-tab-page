@@ -15,8 +15,8 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   };
 
   return (
-    <form onSubmit={handleSearch}>
-      <div className="relative w-96">
+    <form onSubmit={handleSearch} className="w-full sm:w-auto">
+      <div className="relative w-full sm:w-[32rem]">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 text-black">
           🔍
         </div>

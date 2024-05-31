@@ -8,18 +8,23 @@ const QuickLinks = ({
   onLinkClick: any;
 }) => {
   return (
-    <div className="w-full max-w-96 pt-8">
-      <div className="flex flex-wrap justify-around">
+    <div className="w-full sm:w-[32rem] pt-8">
+      <div className="flex flex-wrap justify-around gap-2">
         {links.map((link: { url?: string; name: string }) => (
-          <a
+          <div
             key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => onLinkClick(link.url)}
+            className="border border-stone-500 rounded-xl shadow-lg p-4 w-full sm:w-1/3 md:w-1/5 flex items-center justify-center text-center cursor-pointer transition-transform transform hover:scale-105 hover:shadow-xl hover:dark:bg-gray-700"
           >
-            {link.name}
-          </a>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => onLinkClick(link.url)}
+              className="hover:border-text-blue-500 truncate"
+            >
+              {link.name}
+            </a>
+          </div>
         ))}
       </div>
     </div>
